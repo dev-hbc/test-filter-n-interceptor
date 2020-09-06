@@ -12,7 +12,6 @@ import java.io.IOException;
 /**
  * Filter requests by validating the authorization from the request header.
  */
-@WebFilter(urlPatterns = "/*", filterName = "TestFilter")
 public class TestFilter implements Filter {
     private final static String USER_ROLE_HEADER = "UserRole";
     private final static String USER_ROLE_FIELD_TYLE = "Type=";
@@ -25,7 +24,7 @@ public class TestFilter implements Filter {
         final HttpServletRequest request = (HttpServletRequest) servletRequest;
         final HttpServletResponse response = (HttpServletResponse) servletResponse;
 
-        System.out.println("TestFilter Executed");
+        System.out.println("TestFilter Executed by XmlBeanConfig");
 
         final String userRoleType = extractUserRoleTypeFromRequest(request);
         if (userRoleType == null) {
