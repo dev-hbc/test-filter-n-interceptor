@@ -13,7 +13,7 @@ import java.io.IOException;
  * Filter requests by validating the authorization from the request header.
  */
 public class TestFilter implements Filter {
-    private final static String USER_ROLE_HEADER = "UserRole";
+    private final static String USER_ROLE_HEADER = "USER_ROLE";
     private final static String USER_ROLE_FIELD_TYLE = "Type=";
 
     /**

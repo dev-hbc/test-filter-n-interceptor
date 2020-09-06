@@ -9,11 +9,16 @@ import javax.annotation.Resource;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/test")
+@RequestMapping(path = "/")
 public class TestController {
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(path = "/login", method = RequestMethod.GET)
     public ResponseEntity<Object> login() {
-        return new ResponseEntity<>("TEST DEFAULT API", HttpStatus.OK);
+        return new ResponseEntity<>("LOGIN ACTION", HttpStatus.OK);
+    }
+
+    @RequestMapping(path = "/test", method = RequestMethod.GET)
+    public ResponseEntity<Object> test() {
+        return new ResponseEntity<>("TEST ACTION", HttpStatus.OK);
     }
 }

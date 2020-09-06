@@ -20,4 +20,8 @@
         </property>
     </bean>
 
+    <mvc:interceptors>
+        <bean class="demo.InterceptorimplbyExtendedHandlerInterceptorAdapter.TestInterceptor"/>
+    </mvc:interceptors>
+
 </beans>
